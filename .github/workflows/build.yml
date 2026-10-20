@@ -1,0 +1,36 @@
+name: Build ESP8266 Firmware
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install arduino-cli
+        uses: arduino/setup-arduino-cli@v2
+
+      - name: Configure ESP8266 Board Index & Install Core
+        run: |
+          arduino-cli config init
+          arduino-cli config add board_manager.additional_urls https://arduino.esp8266.com/stable/package_esp8266com_index.json
+          arduino-cli core update-index
+          arduino-cli core install esp8266:esp8266
+
+      - name: Install Required Libraries (DHT & Blynk)
+        run: |
+          arduino-cli lib install "DHT sensor library"
+          arduino-cli lib install "Adafruit Unified Sensor"
+          arduino-cli lib install "Blynk"
+
+      - name: Compile ESP8266 Sketch
+        run: |
+          SKETCH_PATH="SmartIncubator.ino"
+          arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 "${SKETCH_PATH}" --warnings all
