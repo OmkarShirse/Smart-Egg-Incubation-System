@@ -131,11 +131,3 @@ Smart-Egg-Incubation-System/
 - [ ] **Multi-species profiles** — preset profiles for duck (28 days), quail (17 days)
 
 ---
-
-## 🤝 Contributing
-
-See [GitHub repo](https://github.com/OmShirse/Smart-Egg-Incubation-System) for open issues.
-
----
-
-*Part of the [OmShirse/chess](https://github.com/OmShirse/chess) monorepo*
