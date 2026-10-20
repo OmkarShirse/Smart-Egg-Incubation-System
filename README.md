@@ -2,7 +2,7 @@
 
 > **IoT-based automated egg incubator** — ESP8266 + DHT11 + Blynk with stage-based temperature/humidity control over a 21-day cycle.
 
-[![GitHub](https://img.shields.io/badge/GitHub-OmShirse-blue?logo=github)](https://github.com/OmShirse/Smart-Egg-Incubation-System)
+[![GitHub](https://img.shields.io/badge/GitHub-OmkarShirse-blue?logo=github)](https://github.com/OmkarShirse/Smart-Egg-Incubation-System)
 
 ---
 
@@ -44,7 +44,7 @@ The incubation cycle is divided into **two stages** with automatic humidity adju
    └─► [Blynk Cloud] ──► [Mobile App]
 ```
 
-**Block Diagram:** [View on GitHub](https://github.com/OmShirse/Smart-Egg-Incubation-System/blob/main/Smart%20Egg%20Incubation%20System.png)
+**Block Diagram:** [View on GitHub](https://github.com/OmkarShirse/Smart-Egg-Incubation-System/blob/main/Smart%20Egg%20Incubation%20System.png)
 
 ---
 
