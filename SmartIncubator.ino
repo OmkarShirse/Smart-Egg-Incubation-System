@@ -128,7 +128,7 @@ void sensorTick() {
     // Check hatching complete
     if (dayCount > TOTAL_DAYS) {
         Serial.println("[INFO] Incubation complete — Day 21 reached");
-        Blynk.notify("🐣 Incubation complete! Day 21 reached.");
+        Blynk.logEvent("hatching_complete", "🐣 Incubation complete! Day 21 reached.");
         digitalWrite(RELAY_HEATER, HIGH);  // OFF — safety
         digitalWrite(RELAY_HUMID,  HIGH);  // OFF
     }

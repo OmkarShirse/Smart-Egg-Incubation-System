@@ -24,11 +24,13 @@ jobs:
           arduino-cli core update-index
           arduino-cli core install esp8266:esp8266
 
-      - name: Install Required Libraries (DHT & Blynk)
+      - name: Install Required Libraries
         run: |
           arduino-cli lib install "DHT sensor library"
           arduino-cli lib install "Adafruit Unified Sensor"
           arduino-cli lib install "Blynk"
+          arduino-cli lib install "LiquidCrystal I2C"
+          arduino-cli lib install "NTPClient"
 
       - name: Compile ESP8266 Sketch
         run: |
