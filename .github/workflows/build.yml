@@ -34,5 +34,4 @@ jobs:
 
       - name: Compile ESP8266 Sketch
         run: |
-          SKETCH_PATH="SmartIncubator.ino"
-          arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 "${SKETCH_PATH}" --warnings all
+          arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 SmartIncubator --warnings all
