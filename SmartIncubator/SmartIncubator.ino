@@ -18,6 +18,7 @@
  *   V3 → Day number
  */
 
+#include "config.h"
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 #include <DHT.h>
@@ -25,7 +26,6 @@
 #include <LiquidCrystal_I2C.h>
 #include <NTPClient.h>
 #include <WiFiUdp.h>
-#include "config.h"
 
 // ─── Pin Definitions ─────────────────────────────────────────────────────────
 #define DHT_PIN       2   // D4
